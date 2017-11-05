@@ -1,11 +1,13 @@
 
 import requests
 
+
 def get_headers_from_url(url):
     requester = Requester(url)
     result = requester.make_request()
     headers = result.headers
     return headers
+
 
 class Requester(object):
 

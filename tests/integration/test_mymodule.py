@@ -1,5 +1,5 @@
 import unittest
-from project import mymodule
+from pythontesting import mymodule
 
 class TestIntegrationMyModule(unittest.TestCase):
 
