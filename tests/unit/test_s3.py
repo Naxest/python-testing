@@ -29,7 +29,7 @@ class S3Test(unittest.TestCase):
 		with self.assertRaises(Exception) as c:
 			s3.download_files('pythontesting-beeva', [], '/tmp')
 
-		self.assertEqual(c.exception.message, 'list cannot be empty')
+		self.assertEqual(str(c.exception), 'list cannot be empty')
 
 	@patch('pythontesting.s3.download_file')
 	def test_download_files_one_file(self, download_file_mock):
